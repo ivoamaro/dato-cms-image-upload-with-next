@@ -4,7 +4,9 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main>
-      <FileUpload locationId="" />
+      <div className="m-5 w-[500px]">
+        <FileUpload locationId="" />
+      </div>
     </main>
   );
 }
