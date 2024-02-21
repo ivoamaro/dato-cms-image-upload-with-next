@@ -39,7 +39,7 @@ const FileUpload: FC<FileUploadProps> = ({ locationId }) => {
         const isTheFileUploaded = await IsTheFileAlreadyUploaded(md5Hash);
 
         if (isTheFileUploaded === false) {
-          //dá upload ao ficheiro
+          //uploads the file
           const s3url = await getPermissionData(file.name);
 
           const uploadFile = await fetch(s3url.data.attributes.url, {
