@@ -1,0 +1,6 @@
+query fileMD5($md5: String = "") {
+  upload(filter: { md5: { eq: $md5 } }) {
+    id
+    md5
+  }
+}
